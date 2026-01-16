@@ -1,9 +1,14 @@
-import Image from "next/image";
+import MainLayout from "@/components/Layout/MainLayout";
+import StepsLayout from "@/components/Layout/StepsLayout";
 
 export default function Home() {
   return (
-    <div className="">
-
-    </div>
+    <MainLayout>
+      <main>
+        <StepsLayout>
+          Step
+        </StepsLayout>
+      </main>
+    </MainLayout>
   );
 }

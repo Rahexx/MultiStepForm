@@ -6,19 +6,21 @@
   /* Colors */
   --color-grey: #9699AA;
   --color-orange: #FFAF7E;
+
   --color-red-500: #EE374A;
   --color-red-450: #E96170;
   --color-red-400: #F9818E;
-  --purple-600: #483EFF;
-  --purple-500: #6259FF;
-  --purple-400: #928CFF;
-  --purple-200: #D6D9E6;
-  --blue-950: #022959;
-  --blue-700: #164A8A;
-  --blue-300: #ABBCFF;
-  --blue-200: #BEE2FD;
-  --blue-100: #EFF5FF;
-  --blue-50: #F8F9FF;
+
+  --color-purple-600: #483EFF;
+  --color-purple-500: #6259FF;
+  --color-purple-400: #928CFF;
+
+  --color-blue-950: #022959;
+  --color-blue-700: #164A8A;
+  --color-blue-300: #ABBCFF;
+  --color-blue-200: #BEE2FD;
+  --color-blue-100: #EFF5FF;
+  --color-blue-50: #F8F9FF;
 
   /* Letter Spacing */
   --tracking-1: 0.063rem;

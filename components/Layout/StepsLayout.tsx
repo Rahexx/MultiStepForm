@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 function StepsLayout({ children }: { children: React.ReactNode }) {
     return (
-        <div className="relative h-[172px]">
+        <div className="relative h-[10.75rem]">
             <Image
                 src="/images/bg-sidebar-mobile.svg"
                 alt="Sidebar Background"

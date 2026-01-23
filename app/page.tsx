@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <MainLayout>
       <StepsLayout>
-          <Nav />
-        </StepsLayout>
+          <p>Item</p>
+      </StepsLayout>
       <FooterLayout>
         <Button type={ButtonType.Back}>Go Back</Button>
         <Button type={ButtonType.Forward}>Next Step</Button>

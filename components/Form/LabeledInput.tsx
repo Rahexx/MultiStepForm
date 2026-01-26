@@ -30,7 +30,7 @@ function LabeledInput({ value: initialValue, onBlur, hasError, type, label, plac
                 onChange={(e) => setValue(e.target.value)}
                 onBlur={onBlur}
                 placeholder={placeholder}
-                className={`bg-white border rounded px-4 py-2 text-sm leading-[150%] placeholder:text-gray-500 placeholder:font-medium hover:cursor-pointer focus:outline-none focus:border-2 ${
+                className={`w-[18.4375rem] h-10 bg-white border rounded px-4 py-2 text-sm leading-[150%] placeholder:text-gray-500 placeholder:font-medium hover:cursor-pointer focus:outline-none focus:border-2 ${
                     hasError ? 'border-red-500' : 'border-purple-200 focus:border-purple-600'
                 }`}
             />

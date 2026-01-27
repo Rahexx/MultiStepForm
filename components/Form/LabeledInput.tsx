@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useId } from 'react';
 
 interface LabeledInputProps {
     value: string;
-    onBlur: () => void;
+    onBlur: (e: React.FocusEvent<HTMLInputElement>) => void;
     hasError: boolean;
     type: string;
     label: string;
@@ -11,11 +11,12 @@ interface LabeledInputProps {
 
 function LabeledInput({ value: initialValue, onBlur, hasError, type, label, placeholder = ''}: LabeledInputProps) {
     const [value, setValue] = useState(initialValue);
+    const idInput = useId();
 
     return (
         <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
-                <label className="text-blue-950 text-xs font-semibold leading-[120%]">
+                <label htmlFor={idInput} className="text-blue-950 text-xs font-semibold leading-[120%]">
                     {label}
                 </label>
                 {hasError && (
@@ -27,6 +28,9 @@ function LabeledInput({ value: initialValue, onBlur, hasError, type, label, plac
             <input
                 type={type}
                 value={value}
+                id={idInput}
+                name={idInput}
+                aria-invalid={hasError}
                 onChange={(e) => setValue(e.target.value)}
                 onBlur={onBlur}
                 placeholder={placeholder}

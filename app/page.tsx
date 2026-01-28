@@ -2,10 +2,13 @@
 import Button, { ButtonType } from "@/components/Form/Button";
 import FormHeader from "@/components/Form/FormHeader";
 import LabeledInput from "@/components/Form/LabeledInput";
+import PlanList from "@/components/Form/PlanList";
+import PlanOption from "@/components/Form/PlanOption";
 import FooterLayout from "@/components/Layout/FooterLayout";
 import FormLayout from "@/components/Layout/FormLayout";
 import MainLayout from "@/components/Layout/MainLayout";
 import PersonalLayout from "@/components/Layout/PersonalLayout";
+import PlanLayout from "@/components/Layout/PlanLayout";
 import StepsLayout from "@/components/Layout/StepsLayout";
 import { STEPS } from "@/config/steps.config";
 import { useFormStore } from "@/store/useFormStore";
@@ -44,6 +47,36 @@ export default function Home() {
                 <LabeledInput type="email" label="Email Address" value={email} onBlur={(e) => setEmail(e.target.value)} hasError={errors.email} placeholder="e.g. stephenking@lorem.com" />
                 <LabeledInput type="tel" label="Phone Number" value={phoneNumber} onBlur={(e) => setPhoneNumber(e.target.value)} hasError={errors.phoneNumber} placeholder="e.g. +1 234 567 890" />
               </PersonalLayout>
+            )}
+            {step === 2 && (
+              <PlanLayout>
+                <PlanList>
+                  <PlanOption 
+                    icon="icon-arcade.svg" 
+                    optionName="Arcade" 
+                    isActive={false} 
+                    isYearlyCharge={false} 
+                    monthlyCharge={9} 
+                    yearlyCharge={90} 
+                  />
+                  <PlanOption 
+                    icon="icon-advanced.svg" 
+                    optionName="Advanced" 
+                    isActive={false} 
+                    isYearlyCharge={false} 
+                    monthlyCharge={12} 
+                    yearlyCharge={120} 
+                  />
+                  <PlanOption 
+                    icon="icon-pro.svg" 
+                    optionName="Pro" 
+                    isActive={false} 
+                    isYearlyCharge={false} 
+                    monthlyCharge={15} 
+                    yearlyCharge={150} 
+                  />
+                </PlanList>
+              </PlanLayout>
             )}
           </FormLayout>
       </StepsLayout>

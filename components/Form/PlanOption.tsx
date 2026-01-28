@@ -12,9 +12,9 @@ interface PlanOptionProps {
 
 export default function PlanOption({icon, optionName, monthlyCharge, yearlyCharge, isYearlyCharge,isActive,}: PlanOptionProps) {
     return (
-        <div 
+        <li 
         className={
-            clsx('h-20 w-80 p-4 rounded-lg flex gap-4 border', 
+            clsx('h-20 w-[18.438rem] p-4 rounded-lg flex items-center gap-4 border pointer', 
             isActive ? 'bg-blue-50 border-purple-500' : 'bg-white border-purple-200'
             )}>
             <Image
@@ -38,6 +38,6 @@ export default function PlanOption({icon, optionName, monthlyCharge, yearlyCharg
                     </p>
                 )}
             </div>
-        </div>
+        </li>
     );
 }

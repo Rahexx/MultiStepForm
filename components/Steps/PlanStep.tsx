@@ -1,5 +1,6 @@
 import PlanList from "../Form/PlanList";
 import PlanOption from "../Form/PlanOption";
+import SubscriptionOption from "../Form/SubscriptionOpion";
 import PlanLayout from "../Layout/PlanLayout";
 import {PLANS} from "@/config/plans.config";
 
@@ -19,6 +20,7 @@ function PlanStep() {
                     />
                 ))}
             </PlanList>
+            <SubscriptionOption />
         </PlanLayout>
     );
 }

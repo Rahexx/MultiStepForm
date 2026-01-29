@@ -8,11 +8,13 @@ interface PlanOptionProps {
     yearlyCharge: number;
     isYearlyCharge: boolean;
     isActive: boolean;
+    onChange: () => void;
 }
 
-export default function PlanOption({icon, optionName, monthlyCharge, yearlyCharge, isYearlyCharge,isActive,}: PlanOptionProps) {
+export default function PlanOption({icon, optionName, monthlyCharge, yearlyCharge, isYearlyCharge,isActive, onChange}: PlanOptionProps) {
     return (
         <li 
+        onClick={onChange}
         className={
             clsx('h-20 w-[18.438rem] p-4 rounded-lg flex items-center gap-4 border pointer', 
             isActive ? 'bg-blue-50 border-purple-500' : 'bg-white border-purple-200'
@@ -23,7 +25,7 @@ export default function PlanOption({icon, optionName, monthlyCharge, yearlyCharg
                 width={40}
                 height={40}
             />
-            <div>
+            <div className='flex flex-col gap-1'>
                 <p className="font-medium text-base leading-[120%] text-blue-950 m-0">
                     {optionName}
                 </p>

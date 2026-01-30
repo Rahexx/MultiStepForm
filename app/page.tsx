@@ -1,10 +1,12 @@
 "use client";
+import AddOn from "@/components/Form/AddOn";
 import Button, { ButtonType } from "@/components/Form/Button";
 import FormHeader from "@/components/Form/FormHeader";
 import FooterLayout from "@/components/Layout/FooterLayout";
 import FormLayout from "@/components/Layout/FormLayout";
 import MainLayout from "@/components/Layout/MainLayout";
 import StepsLayout from "@/components/Layout/StepsLayout";
+import AddOnsStep from "@/components/Steps/AddOnsStep";
 import PersonalStep from "@/components/Steps/PersonalStep";
 import PlanStep from "@/components/Steps/PlanStep";
 import { STEPS } from "@/config/steps.config";
@@ -38,6 +40,7 @@ export default function Home() {
             <FormHeader title={currentStep.title} description={currentStep.description} />
             {step === 1 && <PersonalStep />}
             {step === 2 && <PlanStep />}
+            {step === 3 && <AddOnsStep />}
           </FormLayout>
       </StepsLayout>
       <FooterLayout>

@@ -8,6 +8,7 @@ import StepsLayout from "@/components/Layout/StepsLayout";
 import AddOnsStep from "@/components/Steps/AddOnsStep";
 import PersonalStep from "@/components/Steps/PersonalStep";
 import PlanStep from "@/components/Steps/PlanStep";
+import SummaryStep from "@/components/Steps/SummaryStep";
 import { STEPS } from "@/config/steps.config";
 import { useFormStore } from "@/store/useFormStore";
 import { useStepsStore } from "@/store/useStepsStore";
@@ -40,6 +41,7 @@ export default function Home() {
             {step === 1 && <PersonalStep />}
             {step === 2 && <PlanStep />}
             {step === 3 && <AddOnsStep />}
+            {step === 4 && <SummaryStep />}
           </FormLayout>
       </StepsLayout>
       <FooterLayout>

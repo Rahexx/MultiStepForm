@@ -8,6 +8,7 @@ interface FormState {
     activePlan: string;
     isYearlyCharge: boolean;
     activeAddOns: number[];
+    isConfirmed: boolean;
     setName: (name: string) => void;
     setEmail: (email: string) => void;
     setPhoneNumber: (phoneNumber: string) => void;
@@ -16,6 +17,7 @@ interface FormState {
     setIsYearlyCharge: (isYearlyCharge: boolean) => void;
     setActiveAddOns: (activeAddOns: number[]) => void;
     toggleAddOn: (addOnId: number) => void;
+    setIsConfirmed: (isConfirmed: boolean) => void;
 }
 
 export const useFormStore = create<FormState>((set) => ({
@@ -26,6 +28,7 @@ export const useFormStore = create<FormState>((set) => ({
     activePlan: 'Arcade',
     isYearlyCharge: false,
     activeAddOns: [],
+    isConfirmed: false,
     setName: (name) => set({ name }),
     setEmail: (email) => set({ email }),
     setPhoneNumber: (phoneNumber) => set({ phoneNumber }),
@@ -33,6 +36,7 @@ export const useFormStore = create<FormState>((set) => ({
     setActivePlan: (activePlan) => set({ activePlan}),
     setIsYearlyCharge: (isYearlyCharge) => set({ isYearlyCharge }),
     setActiveAddOns: (activeAddOns) => set({ activeAddOns }),
+    setIsConfirmed: (isConfirmed) => set({ isConfirmed }),
     toggleAddOn: (addOnId) => set((state) => {
         if (state.activeAddOns.includes(addOnId)) {
             return { activeAddOns: state.activeAddOns.filter(id => id !== addOnId) };

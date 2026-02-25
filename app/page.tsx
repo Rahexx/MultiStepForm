@@ -6,6 +6,7 @@ import FormLayout from "@/components/Layout/FormLayout";
 import MainLayout from "@/components/Layout/MainLayout";
 import StepsLayout from "@/components/Layout/StepsLayout";
 import AddOnsStep from "@/components/Steps/AddOnsStep";
+import FinishStep from "@/components/Steps/FinishStep";
 import PersonalStep from "@/components/Steps/PersonalStep";
 import PlanStep from "@/components/Steps/PlanStep";
 import SummaryStep from "@/components/Steps/SummaryStep";
@@ -15,7 +16,7 @@ import { useStepsStore } from "@/store/useStepsStore";
 
 export default function Home() {
   const {step, nextStep, prevStep} = useStepsStore();
-  const {name, email, phoneNumber, setErrors} = useFormStore();
+  const {name, email, phoneNumber, setErrors, isConfirmed, setIsConfirmed} = useFormStore();
   const currentStep = STEPS.find(s => s.id === step) || STEPS[0];
   
   const validateStep = (): boolean => {
@@ -37,11 +38,17 @@ export default function Home() {
     <MainLayout>
       <StepsLayout>
           <FormLayout>
-            <FormHeader title={currentStep.title} description={currentStep.description} />
-            {step === 1 && <PersonalStep />}
-            {step === 2 && <PlanStep />}
-            {step === 3 && <AddOnsStep />}
-            {step === 4 && <SummaryStep />}
+            {!isConfirmed && <FormHeader title={currentStep.title} description={currentStep.description} />}
+            {!isConfirmed ? (
+              <>
+                {step === 1 && <PersonalStep />}
+                {step === 2 && <PlanStep />}
+                {step === 3 && <AddOnsStep />}
+                {step === 4 && <SummaryStep />}
+              </>
+            ) : (
+              <FinishStep />
+            )}
           </FormLayout>
       </StepsLayout>
       <FooterLayout>
@@ -50,6 +57,9 @@ export default function Home() {
         ) : (<div />)}
         {step < 4 && (
           <Button type={ButtonType.Forward} onClick={handleNextStep}>Next Step</Button>
+          )}
+        {step === 4 && (
+          <Button type={ButtonType.Forward} onClick={() => setIsConfirmed(true)}>Confirm</Button>
           )}
       </FooterLayout>
     </MainLayout>

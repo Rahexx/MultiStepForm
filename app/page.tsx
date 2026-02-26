@@ -52,13 +52,13 @@ export default function Home() {
           </FormLayout>
       </StepsLayout>
       <FooterLayout>
-        {step > 1 ? (
+        {step > 1 && !isConfirmed? (
           <Button type={ButtonType.Back} onClick={prevStep}>Go Back</Button>
         ) : (<div />)}
         {step < 4 && (
           <Button type={ButtonType.Forward} onClick={handleNextStep}>Next Step</Button>
           )}
-        {step === 4 && (
+        {step === 4 && !isConfirmed && (
           <Button type={ButtonType.Forward} onClick={() => setIsConfirmed(true)}>Confirm</Button>
           )}
       </FooterLayout>

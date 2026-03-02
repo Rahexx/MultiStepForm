@@ -3,8 +3,8 @@ import Nav from "@/components/Nav/Nav";
 
 function StepsLayout({ children }: { children: React.ReactNode }) {
     return (
-        <main className="relative">
-            <section className="relative h-[10.75rem]">
+        <main className="relative md:flex md:h-full md:w-full">
+            <section className="relative h-[10.75rem] md:h-full md:w-[17.375rem]">
                 <Image
                     src="/images/bg-sidebar-mobile.svg"
                     alt="Sidebar Background"

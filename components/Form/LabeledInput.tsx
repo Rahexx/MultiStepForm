@@ -16,7 +16,7 @@ function LabeledInput({ value: initialValue, onBlur, hasError, type, label, plac
     return (
         <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
-                <label htmlFor={idInput} className="text-blue-950 text-xs font-semibold leading-[120%]">
+                <label htmlFor={idInput} className="text-blue-950 text-xs font-semibold leading-[120%] md:text-sm">
                     {label}
                 </label>
                 {hasError && (
@@ -34,7 +34,7 @@ function LabeledInput({ value: initialValue, onBlur, hasError, type, label, plac
                 onChange={(e) => setValue(e.target.value)}
                 onBlur={onBlur}
                 placeholder={placeholder}
-                className={`w-[18.4375rem] h-10 bg-white border rounded px-4 py-2 text-sm leading-[150%] placeholder:text-gray-500 placeholder:font-medium hover:cursor-pointer focus:outline-none focus:border-2 ${
+                className={`w-[18.4375rem] h-10 bg-white border rounded px-4 py-2 text-sm leading-[150%] placeholder:text-gray-500 placeholder:font-medium hover:cursor-pointer focus:outline-none focus:border-2 md:w-[21.75rem] md:h-12 md:rounded-lg md:text-base md:leading-[120%] ${
                     hasError ? 'border-red-500' : 'border-purple-200 focus:border-purple-600'
                 }`}
             />

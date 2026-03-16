@@ -16,7 +16,7 @@ export default function PlanOption({icon, optionName, monthlyCharge, yearlyCharg
         <li 
         onClick={onChange}
         className={
-            clsx('h-20 w-[18.438rem] p-4 rounded-lg flex items-center gap-4 border pointer md:w-[21.75rem] md:relative', 
+            clsx('h-20 w-[18.438rem] p-4 rounded-lg flex items-center gap-4 border pointer md:w-[21.75rem] md:relative lg:h-[10rem] lg:w-[8.625rem] lg:flex-col lg:p-[1.125rem] lg:items-start lg:justify-between', 
             isActive ? 'bg-blue-50 border-purple-500' : 'bg-white border-purple-200'
             )}>
             <Image

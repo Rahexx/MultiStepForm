@@ -7,7 +7,7 @@ function SubscriptionOption() {
     const {isYearlyCharge, setIsYearlyCharge} = useFormStore();
 
     return (
-        <section className="h-12 w-[18.438rem] flex justify-center items-center gap-6 bg-blue-50 rounded-lg md:w-[21.75rem]">
+        <section className="h-12 w-[18.438rem] flex justify-center items-center gap-6 bg-blue-50 rounded-lg md:w-[21.75rem] lg:w-full">
             <span 
             className={clsx(
                 "text-sm font-medium leading-[150%]",

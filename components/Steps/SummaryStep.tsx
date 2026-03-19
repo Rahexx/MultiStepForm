@@ -14,7 +14,7 @@ function SummaryStep() {
 
     return (
         <div className="flex flex-col gap-y-6 md:gap-y-8">
-            <section className="flex flex-col p-4 bg-blue-50 rounded-lg">
+            <section className="flex flex-col p-4 bg-blue-50 rounded-lg lg:px-6 lg:py-[1.344rem]">
                 <div className="flex justify-between items-center mb-4">
                     <div className="flex flex-col">
                         <h3 className="text-blue-950 text-sm font-medium leading-normal md:text-base md:leading-[120%]">{activePlan} ({isYearlyCharge ? "Yearly" : "Monthly"})</h3>

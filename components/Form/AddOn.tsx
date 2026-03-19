@@ -15,7 +15,7 @@ function AddOn({isActive, title, description, price, isYearlyCharge, toggleState
         <div 
             onClick={toggleState}
             className={clsx(
-                "flex h-[3.875rem] w-[18.438rem] items-center py-3 px-4 border rounded-lg cursor-pointer transition-colors duration-300 md:h-[5.063rem] md:w-[21.75rem] md:py-[1.156rem] md:px-6",
+                "flex h-[3.875rem] w-[18.438rem] items-center py-3 px-4 border rounded-lg cursor-pointer transition-colors duration-300 md:h-[5.063rem] md:w-[21.75rem] md:py-[1.156rem] md:px-6 lg:w-full",
                 isActive ? "bg-blue-50 border-purple-600" : "bg-white border-purple-200")}>
             <Checkbox isActive={isActive} />
             <div className="flex flex-col ml-4 md:ml-6 md:gap-2">

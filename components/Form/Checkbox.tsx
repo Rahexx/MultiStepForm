@@ -1,5 +1,6 @@
 import clsx from "clsx"
 import Image from "next/image"
+import { getImagePath } from "@/lib/imagePath"
 
 function Checkbox({isActive}: {isActive: boolean}) {
     return (
@@ -8,7 +9,7 @@ function Checkbox({isActive}: {isActive: boolean}) {
         )}>
             {isActive && (
                 <Image 
-                    src="/images/icon-checkmark.svg"
+                    src={getImagePath("/images/icon-checkmark.svg")}
                     width={12}
                     height={10}
                     alt="check icon"

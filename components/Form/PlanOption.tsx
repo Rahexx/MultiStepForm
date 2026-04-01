@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import clsx from 'clsx';
+import { getImagePath } from '@/lib/imagePath';
 
 interface PlanOptionProps {
     icon: string;
@@ -20,7 +21,7 @@ export default function PlanOption({icon, optionName, monthlyCharge, yearlyCharg
             isActive ? 'bg-blue-50 border-purple-500' : 'bg-white border-purple-200'
             )}>
             <Image
-                src={`/images/${icon}`}
+                src={getImagePath(`/images/${icon}`)}
                 alt={optionName}
                 width={40}
                 height={40}
